@@ -167,3 +167,6 @@ location ~* \.(js|pdf|swf)$ {
 ```sh
 gunicorn --workers=2 test:app
 ```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/e68b1df4-8e74-438a-9b29-83a51663bc93)
+
+
