@@ -123,6 +123,11 @@ Password: *********
 
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/8f88aa44-73dd-4ba7-94ec-a83a18ac9355)
 
+Website Speed Test check Output
+
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/493e90e4-93ee-4d2f-8565-b8d4bc081874)
+
+
 10. Installed SSL on domain: jai.hopto.org
 ```sh
 sudo apt remove certbot  -->  (Removed from server)
