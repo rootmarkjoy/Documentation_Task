@@ -75,4 +75,54 @@ location ~ \.php$ {
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
 ```
+Enabled Rewrite rules in site-available
+```sh
+location / {
+    #try_files $uri $uri/ =404;
+    try_files $uri $uri/ /index.php$is_args$args;
+}
+```
+9. Wordpress login details
+```sh
+Website URL: https://jai.hopto.org
+Admin URL: https://jai.hopto.org/wp-admin/
+User: *******
+Password: *********
+```
+10. Installed SSL on domain: jai.hopto.org
+```sh
+sudo apt remove certbot  -->  (Removed from server)
+sudo snap install --classic certbot
+sudo certbot --nginx -d jai.hopto.org
 
+Created symlink directory
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo systemctl status certbot.timer
+sudo certbot renew --dry-run
+```
+11. Installed Redis cache
+```sh
+sudo apt update
+sudo apt install redis-server
+vi /etc/redis/redis.conf  -->  (Made changes supervised on to systemd)
+systemctl restart redis.service
+systemctl enable redis.service
+```
+12. Fixed Expired header by using below code in nginx.conf
+```sh
+location ~* \.(jpg|jpeg|gif|png)$ {
+  expires 1y;
+}
+
+location ~* \.(css)$ {
+  expires 1M;
+}
+
+location ~* \.(js|pdf|swf)$ {
+  expires 1M;
+}
+```
+13. Reverse Proxy enabled
+```sh
+gunicorn --workers=2 test:app
+```
