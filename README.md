@@ -63,6 +63,8 @@ cd /var/www/html/
 wget https://wordpress.org/latest.zip
 unzip latest.zip
 ```
+Added 
+
 8. Installed Wordpress + php8.3-fpm
 ```sh
 apt-get install php8.3-fpm
@@ -89,6 +91,9 @@ Admin URL: https://jai.hopto.org/wp-admin/
 User: *******
 Password: *********
 ```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/8f88aa44-73dd-4ba7-94ec-a83a18ac9355)
+
+
 10. Installed SSL on domain: jai.hopto.org
 ```sh
 sudo apt remove certbot  -->  (Removed from server)
@@ -108,7 +113,7 @@ vi /etc/redis/redis.conf  -->  (Made changes supervised on to systemd)
 systemctl restart redis.service
 systemctl enable redis.service
 ```
-![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/67dc6368-41a4-4af4-ab13-b9ad8562d750)
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/97f8279e-a970-4c81-a5a2-5fdbd32d9007)
 
 12. Fixed Expired header by using below code in nginx.conf
 ```sh
