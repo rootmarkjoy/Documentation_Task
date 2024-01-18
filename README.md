@@ -64,7 +64,7 @@ Bye
 6. DB created for wordpress
 ```sh
 CREATE DATABASE wordpressdb DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'admin@12345';
+CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY '*********';
 GRANT ALL ON wordpressdb.* TO 'wordpressuser'@'localhost';
 exit
 ```
