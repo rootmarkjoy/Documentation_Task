@@ -63,7 +63,18 @@ cd /var/www/html/
 wget https://wordpress.org/latest.zip
 unzip latest.zip
 ```
-Added 
+To secure wordpress more we have added secret-key under wp-config.php file.  -->  (Secret-key can be generate with the help of this URL: https://api.wordpress.org/secret-key/1.1/salt/)
+```sh
+define('AUTH_KEY',         'Q7}BQ>[K{mAf|HLeZ.v~Uqcx#Ti]oae28f+Hd-DD1pMn+8-t|JF6nk5<w^6?G-1>');
+define('SECURE_AUTH_KEY',  '8z`?-oR._3hai!h8:)!;S|aeVZDMDVC=QTP2ZwVBX&QlFAA>p)1vcE^`aRc4Qfo~');
+define('LOGGED_IN_KEY',    'y`^bTDITW7n,iih3sFe.+zm[@&22KGR,^Z|O]KO|~PQGhMgHi]i]+@lk$Df2>.lO');
+define('NONCE_KEY',        'NZi*++DA78i+d$$zaKWxBu`YctlsM=dA3Q-?K-?.mz1MzG4i4mh`#f3t0xA#QOSZ');
+define('AUTH_SALT',        'W&2?lTVJ|+$mjl.|7Z5Q%/Tz6 HgIpeLPd d%1TPKVs!z,)KVo/NHP!0jp2C&*rG');
+define('SECURE_AUTH_SALT', 'Knv.wJ4%4mTF9R~$@:=z~kZ|Mti(K@rQ53`=pK.-X%z5md_?PI4U`wvXJ!fc<H~%');
+define('LOGGED_IN_SALT',   '~tY)vp+eeB|=ly (JR{Z-bw^QQ&)SEK92N~R*+0/d^cPc<mA^AwNC]4|NEr{q<6x');
+define('NONCE_SALT',       ':5LuP0AgRKCr{+t|MG=5jr&*0^;Ol$)PA?ki{E$,-GqT65HA@|&%(2}f,C[/p4&5');
+```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/99bc3418-af3b-4520-a7ea-0ada158af307)
 
 8. Installed Wordpress + php8.3-fpm
 ```sh
