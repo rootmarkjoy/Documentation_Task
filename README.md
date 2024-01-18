@@ -108,6 +108,8 @@ vi /etc/redis/redis.conf  -->  (Made changes supervised on to systemd)
 systemctl restart redis.service
 systemctl enable redis.service
 ```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/67dc6368-41a4-4af4-ab13-b9ad8562d750)
+
 12. Fixed Expired header by using below code in nginx.conf
 ```sh
 location ~* \.(jpg|jpeg|gif|png)$ {
