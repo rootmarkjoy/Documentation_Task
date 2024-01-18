@@ -174,4 +174,46 @@ gunicorn --workers=2 test:app
 ```
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/e68b1df4-8e74-438a-9b29-83a51663bc93)
 
+14. Regarding GitHub Repository Setup I have tried but the action workflow connected to server but the code didn't push on remote server. But whatever changes we make on local system and push code to repository the action workflow perform the but it get failed. For your reference I have added below screenshot please have a look.
+
+-> Added Secret key Private and Pub key:-
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/dbb6b5d3-5c56-4257-9fb0-3b07d97bab38)
+
+--> Below deploy.yml code
+```sh
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Install rsync
+        run: sudo apt-get install -y rsync
+
+      - name: Deploy to Server
+        run: |
+          rsync -r --exclude='.git' "${{ github.workspace }}/." root@68.183.83.66:/var/www/jai.hopto.org/html/wordpress
+        env:
+          SSH_USER: root
+          SERVER_IP: 68.183.83.66
+          DESTINATION_PATH: /var/www/jai.hopto.org/html/wordpress
+```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/2124b4e7-de41-4617-9ee5-aaf34e9eeafa)
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/734ce7ec-0fd6-4f33-80f8-c127a262a6a4)
+
+
 
