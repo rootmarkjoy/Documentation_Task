@@ -37,6 +37,8 @@ ufw allow 'Nginx HTTP'
 systemctl status nginx
 systemctl enable nginx
 ```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/991dc1da-d821-4eb2-ba58-8f659741aed1)
+
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/91ff462a-909c-4279-876c-8c830c2ca32b)
 
 4. Installed PHP8.3
@@ -106,6 +108,8 @@ location / {
     try_files $uri $uri/ /index.php$is_args$args;
 }
 ```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/95612645-ba38-46e5-bec6-f54c0bea665e)
+
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/ce2e59c4-a010-4d35-9ca7-4e4126276dd8)
 
 9. Wordpress login details
@@ -115,6 +119,8 @@ Admin URL: https://jai.hopto.org/wp-admin/
 User: *******
 Password: *********
 ```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/31fc8bd1-5151-455c-92e6-3089a38d43d0)
+
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/8f88aa44-73dd-4ba7-94ec-a83a18ac9355)
 
 10. Installed SSL on domain: jai.hopto.org
@@ -128,6 +134,8 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo systemctl status certbot.timer
 sudo certbot renew --dry-run
 ```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/6b7142a8-542f-473e-9610-4346a7e991c0)
+
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/119c2e1e-c5ef-4bf7-87e3-dec3a0bf895c)
 
 11. Installed Redis cache
