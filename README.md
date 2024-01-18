@@ -207,13 +207,11 @@ jobs:
       - name: Deploy to Server
         run: |
           rsync -r --exclude='.git' "${{ github.workspace }}/." root@68.183.83.66:/var/www/jai.hopto.org/html/wordpress
-        env:
-          SSH_USER: root
-          SERVER_IP: 68.183.83.66
-          DESTINATION_PATH: /var/www/jai.hopto.org/html/wordpress
 ```
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/2124b4e7-de41-4617-9ee5-aaf34e9eeafa)
-![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/734ce7ec-0fd6-4f33-80f8-c127a262a6a4)
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/e4fc9a65-ea9c-4b56-ba00-b597675f03a8)
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/c85362e8-5f1c-4366-8024-904c9a0942fa)
+
 
 
 
