@@ -176,6 +176,24 @@ gunicorn --workers=2 test:app
 
 14. Regarding GitHub Repository Setup I have tried but the action workflow connected to server but the code didn't push on remote server. But whatever changes we make on local system and push code to repository the action workflow perform the but it get failed. For your reference I have added below screenshot please have a look.
 
+15. Added github repo on local system.
+```sh
+git init
+git status
+git add .
+```
+
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/8900171b-46f1-4f12-b372-5a087e888d5a)
+
+16. Using git command all content has been push to Reporitory
+```sh
+git push https://github.com/rootmarkjoy/deployrepo.git master
+```
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/df081f98-11a9-473c-b32d-547dd03d6b21)
+
+Here github reporitory screenshot:-
+![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/f76e3bd8-801c-4f21-a1af-c4070c506e18)
+
 -> Added Secret key Private and Pub key:-
 ![image](https://github.com/rootmarkjoy/Documentation_Task/assets/45856526/dbb6b5d3-5c56-4257-9fb0-3b07d97bab38)
 
